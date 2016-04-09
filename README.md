@@ -1,6 +1,6 @@
 # get6channels.c
 
-This program was written during my PhD to study electronic noise in atomic junctions. The problem that it addresses is the following: the conductance of the atomic junction **G**, is a sum of several conduction channels, each having a transmission of **0 <= x_i <= 1**,
+This program was written during my PhD to study electronic noise in atomic junctions. The problem that it addresses is the following: the conductance of the atomic junction **G**, is a sum of several conduction channels, each having a transmission of **x_i** (0 <= x_i <= 1),
 
 **G = sum(x_i)**
 
