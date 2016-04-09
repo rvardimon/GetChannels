@@ -18,7 +18,7 @@ There are some nice tricks used here for efficiency (and thanks to Sagi Hed for 
 
 - **minimize number of loop iterations** - We can find in advance that some values of x_i cannot give the solution of the given F,G, so they do not need to be calcualted. We can reduce the number of loop iterations (over x_i), by calculating the possible min-max values for each x_i.
 
-- **use Macros instead of functions** - for MIN/MAX it is much more efficient to work with a macro than a function, which has overheads such as copying the variables in memory.
+- **use macros instead of functions** - for MIN/MAX it is much more efficient to work with a macro than a function, which has overheads such as copying the variables in memory.
 
 - **perform calculations only when needed** - some calculations can be avoided, if we realize ahead that the current x_i cannot give a solution.
 
