@@ -1,16 +1,16 @@
 # get6channels.c
 
-This program was written during my PhD to study electronic noise in atomic junctions. The problem that it addresses is the following:
+This program was written during my PhD to study electronic noise in atomic junctions. The problem that it addresses is the following: the conductance of the atomic junction **G**, is a sum of several conduction channels, each having a transmission of **0 <= x_i <= 1**,
 
-the conductance of the atomic junction G, is a sum of several conduction channels, each having a transmission of 0 <= x_i <= 1,
-G = sum(x_i)
+**G = sum(x_i)**
 
-we are interesting to obtain information on the distribution of x_i. Another experimental parameter, available from noise measurements, is the sum of squares of x_i, which we call F:
-F = sum(x_i^2)
+we are interesting to obtain information on the distribution of x_i. Another experimental parameter we can obtain, is the sum of squares of x_i, which we call **F**:
 
-given that i = 1..6, i.e. we have 6 target values, and only 2 measurements (F,G) - can we say something about the distribution of x_i? Surprisingly, the answer turns to be yes for many cases, and that has become a very valuable tool I used throughout my PhD.
+**F = sum(x_i^2)**
 
-To obtain the possible distributions of x_i, given F and G, we can enumerate of all possibilities of x_i, with a small step (say, dx=0.01), and find the solutions that agree with the measured F,G (within the experimental uncertainties DF,DG). But first, we decide on an order to x_i (to avoid solutions that are permutations of each other), such that x_1 >= x_2 >= ... >= x_n.
+given that **i = 1..6**, i.e. we have 6 target values, and only 2 measurements (F,G) - can we say something about the distribution of x_i? Surprisingly, the answer turns to be yes for many cases, and that has become a very valuable tool I used throughout my PhD.
+
+To obtain the possible distributions of x_i, given F and G, we can enumerate of all possibilities of x_i, with a small step (say, dx=0.01), and find the solutions that agree with the measured F,G (within the experimental uncertainties DF,DG). But first, we decide on an order to x_i (to avoid solutions that are permutations of each other), such that **x_1 >= x_2 >= ... >= x_n**.
 
 However, now there is a computational challenge - we have a lot of calculations to do - for example for dx=0.01 we (naively) have 100^6 = 10^12 possible combinations of x_i values to check. So it is important to write an efficient code, that can minimize the number of calculations. This is exactly the code shown here.
 
