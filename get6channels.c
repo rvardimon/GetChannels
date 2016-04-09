@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : get6Channels.c
+ Name        : get6channels.c
  Author      : Ran Vardimon (Feb. 2013)
  Description : Calculates the possible values x_i (i=1..N) for N=6 channels, 
  that safisty the measured values G,F and their errors DG,DF.
