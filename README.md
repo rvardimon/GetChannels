@@ -22,6 +22,6 @@ There are some nice tricks used here for efficiency (and thanks to Sagi Hed for 
 
 - **perform calculations only when needed** - some calculations can be avoided, if we realize ahead that the current x_i cannot give a solution.
 
-- **use integers instead of floats** - integers can be calculated quicker than floats, and help avoid precision errors. So the trick here, was to multiple F,G,x_i by one_over_dx so that there is no use of floats
+- **use integers instead of floats** - integers can be calculated quicker than floats, and help avoid precision errors. So the trick here was to multiply F, G and x_i by one_over_dx (=1/precision) so that there is no use of floats.
 
 - **use the _register_ keyword** - "register int" hints to the compiler to save the variable in the register of the processor, so all operations with it are faster.
