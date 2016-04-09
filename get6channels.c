@@ -26,7 +26,7 @@
 
 int main(int argc, char **argv)
 {
-    register int x1, x2, x3, x4, x5, x6;
+    register int x1, x2, x3, x4, x5, x6; 
     register int count=0, count6=0, count5=0, count4=0;
     int max_x1=0, max_x2=0, max_x3=0;
     int max_x4=0, max_x5=0, max_x6=0;
